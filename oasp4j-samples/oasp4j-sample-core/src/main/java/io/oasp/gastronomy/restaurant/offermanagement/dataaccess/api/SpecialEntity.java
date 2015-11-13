@@ -87,16 +87,6 @@ public class SpecialEntity extends ApplicationPersistenceEntity implements Speci
   }
 
   /**
-   * Sets the {@link WeeklyPeriodEmbeddable active period} this special applies for.
-   *
-   * @param activePeriod the {@link WeeklyPeriodEmbeddable active period} this special applies for.
-   */
-  public void setActivePeriod(WeeklyPeriodEmbeddable activePeriod) {
-
-    this.activePeriod = activePeriod;
-  }
-
-  /**
    * Returns the new {@link Money special price} for the {@link Offer}.
    *
    * @return specialPrice the new {@link Money special price} for the {@link Offer}.
