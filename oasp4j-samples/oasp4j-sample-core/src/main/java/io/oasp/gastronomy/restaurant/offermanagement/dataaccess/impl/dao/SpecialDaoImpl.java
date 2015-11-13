@@ -52,10 +52,10 @@ public class SpecialDaoImpl extends ApplicationDaoImpl<SpecialEntity> implements
     }
     WeeklyPeriodSearchCriteriaTo activePeriod = criteria.getActivePeriod();
     if (activePeriod != null) {
-      query.where(Alias.$(activePeriod.getStartingHour()).eq(criteria.getActivePeriod().getStartingHour()));
-      query.where(Alias.$(activePeriod.getEndingHour()).eq(criteria.getActivePeriod().getEndingHour()));
-      query.where(Alias.$(activePeriod.getEndingDay()).eq(criteria.getActivePeriod().getEndingDay()));
-      query.where(Alias.$(activePeriod.getStartingDay()).eq(criteria.getActivePeriod().getStartingDay()));
+      query.where(Alias.$(activePeriod.getStartingHour()).eq(special.getActivePeriod().getStartingHour()));
+      query.where(Alias.$(activePeriod.getEndingHour()).eq(special.getActivePeriod().getEndingHour()));
+      query.where(Alias.$(activePeriod.getEndingDay()).eq(special.getActivePeriod().getEndingDay()));
+      query.where(Alias.$(activePeriod.getStartingDay()).eq(special.getActivePeriod().getStartingDay()));
     }
 
     Money specialPrice = criteria.getSpecialPrice();
